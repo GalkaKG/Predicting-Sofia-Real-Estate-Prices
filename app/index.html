@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apartments</title>
+</head>
+<body>
+    <h1>Apartments Listings</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>District</th>
+                <th>Price</th>
+                <th>Price per sqm</th>
+                <th>Currency</th>
+                <th>Apartment Type</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for apartment in apartments %}
+            <tr>
+                <td>{{ apartment.district }}</td>
+                <td>{{ apartment.price }}</td>
+                <td>{{ apartment.price_per_sqm }}</td>
+                <td>{{ apartment.currency }}</td>
+                <td>{{ apartment.apartment_type }}</td>
+                <td>{{ apartment.date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
